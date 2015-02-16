@@ -1,0 +1,42 @@
+
+#calculadora{
+	border: solid 3px blue;
+	border-radius: 8px;
+	color: black;
+	margin:  10px 0 0 30px;
+	width: 220px;
+	height: 350px;
+	font-size: 20px;
+	background: #A9A9A9;
+}
+
+#disp{
+	width: 195px;
+	height: 40px;
+	background: blue;
+	margin-left: 10px;
+}
+
+#disp h2{
+	padding: 3px;
+	color:white;
+}
+
+
+#calculadora p{
+	font-size: 30px;
+	line-height: 20px;
+	letter-spacing: 5px;
+	margin-left: 10px;
+}
+
+.button {
+  background: blue;
+  border: 1px solid black;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  font: bold 20px/20px HelveticaNeue, Arial;
+  padding: 8px 10px;
+  text-decoration: none;
+}
