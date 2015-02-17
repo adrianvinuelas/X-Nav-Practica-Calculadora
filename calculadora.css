@@ -4,14 +4,14 @@
 	border-radius: 8px;
 	color: black;
 	margin:  10px 0 0 30px;
-	width: 220px;
-	height: 350px;
+	width: 340px;
+	height: 380px;
 	font-size: 20px;
-	background: #A9A9A9;
+	background: black;
 }
 
 #disp{
-	width: 195px;
+	width: 280px;
 	height: 40px;
 	background: blue;
 	margin-left: 10px;
@@ -30,7 +30,14 @@
 	margin-left: 10px;
 }
 
+#botones{
+	background: #DC143C;
+	height: 285px;
+
+}
+
 .button {
+  margin-top: 6px;
   background: blue;
   border: 1px solid black;
   border-radius: 8px;
@@ -39,4 +46,18 @@
   font: bold 20px/20px HelveticaNeue, Arial;
   padding: 8px 10px;
   text-decoration: none;
+}
+
+.apagar{
+	animation: desaparece 3s;
+}
+
+@keyframes desaparece { /*para hacer la animacion*/
+   0% {opacity:1;} 
+   70% {opacity: 0.5;}
+   100% {opacity: 0;}
+}
+
+#cajagrande:hover #sandbox h1{
+    font-size: 16px;
 }
