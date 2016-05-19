@@ -21,7 +21,7 @@ function numOperando(acumulado) {
     'use strict';
     var num, esFloat;
     if (acumulado !== 0) {
-        esFloat = acumulado.split(".");
+        esFloat = acumulado.split('.');
         if (esFloat.length === 2) {
             num = parseFloat(acumulado);
         } else {
@@ -84,7 +84,7 @@ function igual() {
     }
     $('#disp span').html(resultado);
     numAcumulado = $('#disp span').html();
-    operacion = "";
+    operacion = '';
     noAns = true;
 }
 
@@ -175,10 +175,10 @@ jQuery(document).ready(function () {
                 encendido = false;
                 $('#disp span').html('Good bye!');
                 $('#disp span').addClass('apagar');
-                setTimeout(function () { 
+                setTimeout(function () {
                     $('#disp span').removeClass('apagar');
-                    $('#disp span').html(''); }, 
-                3000);
+                    $('#disp span').html('');
+                }, 3000);
             } else if ($(this).html() === 'ans') {
                 noAns = false;
                 num1 = numOperando($('#disp span').html());
@@ -194,7 +194,7 @@ jQuery(document).ready(function () {
         }
     });
 
-    $(window).keypress(function(e) {
+    $(window).keypress(function (e) {
         if (encendido) {
             var key = e.which;
             console.log(key);
