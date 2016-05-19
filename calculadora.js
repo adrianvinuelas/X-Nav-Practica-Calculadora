@@ -8,51 +8,51 @@ var numMemo;
 var encendido;
 var noAns;
 
-function asignarnum(num) {
-  if ($('#disp span').html() == "0") {//para si se reincia con "c", no salga el 0 a la izquierda
-    $('#disp span').html("");
-  }
-  numAcumulado = $('#disp span').html() + num;
-  $('#disp span').html(numAcumulado);
+function asignarnum(num){
+	if($('#disp span').html() == "0"){//para si se reincia con "c", no salga el 0 a la izquierda
+		$('#disp span').html("");
+	}
+	numAcumulado = $('#disp span').html() + num;
+	$('#disp span').html(numAcumulado);
 }
 
-function numOperando(acumulado) {
-  var num;
-  if (acumulado != 0) {
-    var esFloat = acumulado.split(".");
-    if (esFloat.length == 2) {
-      num = parseFloat(acumulado);
-    } else {
-      num = parseInt(acumulado);
-    }
-  } else {
-    num = 0;
-  }	
-  return num;
+function numOperando(acumulado){
+	var num;
+	if(acumulado != 0){
+		var esFloat = acumulado.split(".");
+		if(esFloat.length == 2){
+			num = parseFloat(acumulado);
+		}else{
+			num = parseInt(acumulado);
+		}
+	}else{
+		num = 0;
+	}	
+	return num;
 }
 
 function opera(op){
-  console.log("entra en opera pork se a pulsado una operacion")
-  if(num1 == 0 || ((num1 != 0) && noAns)){
-    num1 = numOperando(numAcumulado);
-    console.log("num1 en opera = " + num1);
-  }
-  operacion = op;
-  if(op == "suma"){
-    numAcumulado = $('#disp span').html() + "+";
-  }else if(op == "mult"){
-    numAcumulado = $('#disp span').html() + "x";
-  }else if(op == "div"){
-    numAcumulado = $('#disp span').html() + "/";
-  }else if(op == "resta"){
-    numAcumulado = $('#disp span').html() + "-";
-  }
-  $('#disp span').html(numAcumulado);
+	console.log("entra en opera pork se a pulsado una operacion")
+	if(num1 == 0 || ((num1 != 0) && noAns)){
+		num1 = numOperando(numAcumulado);
+		console.log("num1 en opera = " + num1);
+	}
+	operacion = op;
+	if(op == "suma"){
+		numAcumulado = $('#disp span').html() + "+";
+	}else if(op == "mult"){
+		numAcumulado = $('#disp span').html() + "x";
+	}else if(op == "div"){
+		numAcumulado = $('#disp span').html() + "/";
+	}else if(op == "resta"){
+		numAcumulado = $('#disp span').html() + "-";
+	}
+	$('#disp span').html(numAcumulado);
 }
 
 function igual(){
-    var resultado = 0;
-    console.log("operacion en igual es = " + operacion);
+	var resultado = 0;
+	console.log("operacion en igual es = " + operacion);
 	if(operacion == "suma"){
 		var numeros = $('#disp span').html().split("+");
 		num2 = numOperando(numeros[1]);
